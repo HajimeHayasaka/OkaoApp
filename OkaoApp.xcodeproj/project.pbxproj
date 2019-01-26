@@ -21,6 +21,7 @@
 		2B731E9121FCCB9200A7E34E /* MeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B731E8B21FCCB9200A7E34E /* MeView.swift */; };
 		2B731E9221FCCB9200A7E34E /* StartButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B731E8C21FCCB9200A7E34E /* StartButtonView.swift */; };
 		2B731E9321FCCB9200A7E34E /* PlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B731E8D21FCCB9200A7E34E /* PlayViewController.swift */; };
+		2BFA314A21FCD65200BFF9A3 /* TouchNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFA314921FCD65200BFF9A3 /* TouchNameView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		2B731E8B21FCCB9200A7E34E /* MeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeView.swift; sourceTree = "<group>"; };
 		2B731E8C21FCCB9200A7E34E /* StartButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartButtonView.swift; sourceTree = "<group>"; };
 		2B731E8D21FCCB9200A7E34E /* PlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayViewController.swift; sourceTree = "<group>"; };
+		2BFA314921FCD65200BFF9A3 /* TouchNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchNameView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 				2B731E8821FCCB9200A7E34E /* TitleView.swift */,
 				2B731E8C21FCCB9200A7E34E /* StartButtonView.swift */,
 				2B731E8D21FCCB9200A7E34E /* PlayViewController.swift */,
+				2BFA314921FCD65200BFF9A3 /* TouchNameView.swift */,
 				2B731E8421FCCB8100A7E34E /* KaoView.swift */,
 				2B731E8321FCCB8100A7E34E /* KamiView.swift */,
 				2B731E8B21FCCB9200A7E34E /* MeView.swift */,
@@ -171,6 +174,7 @@
 				2B731E8621FCCB8100A7E34E /* KamiView.swift in Sources */,
 				2B731E8F21FCCB9200A7E34E /* KuchiView.swift in Sources */,
 				2B731E9121FCCB9200A7E34E /* MeView.swift in Sources */,
+				2BFA314A21FCD65200BFF9A3 /* TouchNameView.swift in Sources */,
 				2B731E8521FCCB8100A7E34E /* HanaView.swift in Sources */,
 				2B731E8E21FCCB9200A7E34E /* TitleView.swift in Sources */,
 			);

@@ -1,6 +1,6 @@
 //
 //  TitleView.swift
-//  KidsPlay_Okao
+//  OkaoApp
 //
 //  Created by 早坂甫 on 2019/01/26.
 //  Copyright © 2019年 早坂甫. All rights reserved.

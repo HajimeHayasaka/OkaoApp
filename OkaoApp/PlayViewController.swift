@@ -1,6 +1,6 @@
 //
 //  PlayViewController.swift
-//  KidsPlay_Okao
+//  OkaoApp
 //
 //  Created by 早坂甫 on 2019/01/26.
 //  Copyright © 2019年 早坂甫. All rights reserved.
@@ -18,6 +18,9 @@ class PlayViewController: UIViewController {
     var kuchiView: KuchiView!
     var mimiLeftView: MimiView!
     var mimiRightView: MimiView!
+    var touchNameLabel: TouchNameView!
+    
+    var activeView: UIView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,41 +28,21 @@ class PlayViewController: UIViewController {
         self.view.backgroundColor = UIColor.white
         self.navigationController?.setNavigationBarHidden(true, animated: false)
         
-        let kaoCGRect: CGRect = CGRect(x: view.frame.width * 0.05,
-                                       y: view.frame.height * 0.4,
-                                       width: view.frame.width * 0.85,
-                                       height: view.frame.width * 0.85)
+        let kaoX: CGFloat = view.frame.width * 0.05
+        let kaoY: CGFloat = view.frame.height * 0.4
+        let kaoWidth: CGFloat = view.frame.width * 0.85
+        let kaoHeight: CGFloat = view.frame.width * 0.85
+        
+        let kaoCGRect = CGRect(x: kaoX, y: kaoY, width: kaoWidth, height: kaoHeight)
+        let kamiCGRect = CGRect(x: kaoX - 10, y: kaoY - 100, width: kaoWidth + 20, height: kaoWidth * 0.7)
+        let meLeftCGRect = CGRect(x: kaoX + kaoWidth * 0.15, y: kaoY + kaoHeight * 0.45, width: kaoWidth * 0.2, height: kaoWidth * 0.2)
+        let meRightCGRect = CGRect(x: kaoX + kaoWidth * 0.65, y: kaoY + kaoHeight * 0.45, width: kaoWidth * 0.2, height: kaoWidth * 0.2)
+        let hanaCGRect = CGRect(x: kaoX + kaoWidth * 0.45, y: kaoY + kaoHeight * 0.5, width: kaoWidth * 0.1, height: kaoWidth * 0.2)
+        let kuchiCGRect = CGRect(x: kaoX + kaoWidth * 0.35, y: kaoY + kaoHeight * 0.7, width: kaoWidth * 0.3, height: kaoWidth * 0.2)
+        let mimiLeftCGRect = CGRect(x: kaoX - kaoWidth * 0.1, y: kaoY + kaoHeight * 0.45, width: kaoWidth * 0.2, height: kaoWidth * 0.25)
+        let mimiRightCGRect = CGRect(x: kaoX + kaoWidth * 0.92, y: kaoY + kaoHeight * 0.45, width: kaoWidth * 0.2, height: kaoWidth * 0.25)
+
         kaoView = KaoView(frame: kaoCGRect)
-
-        let kamiCGRect: CGRect = CGRect(x: kaoView.frame.origin.x - 10,
-                                        y: kaoView.frame.origin.y - 100,
-                                        width: kaoView.frame.width + 20,
-                                        height: view.frame.width * 0.7)
-        let meLeftCGRect: CGRect = CGRect(x: kaoView.frame.origin.x + kaoView.frame.width * 0.15,
-                                          y: kaoView.frame.origin.y + kaoView.frame.height * 0.45,
-                                          width: kaoView.frame.width * 0.2,
-                                          height: kaoView.frame.width * 0.2)
-        let meRightCGRect: CGRect = CGRect(x: kaoView.frame.origin.x + kaoView.frame.width * 0.65,
-                                           y: kaoView.frame.origin.y + kaoView.frame.height * 0.45,
-                                           width: kaoView.frame.width * 0.2,
-                                           height: kaoView.frame.width * 0.2)
-        let hanaCGRect: CGRect = CGRect(x: kaoView.frame.origin.x + kaoView.frame.width * 0.45,
-                                        y: kaoView.frame.origin.y + kaoView.frame.height * 0.5,
-                                        width: kaoView.frame.width * 0.1,
-                                        height: kaoView.frame.width * 0.2)
-        let kuchiCGRect: CGRect = CGRect(x: kaoView.frame.origin.x + kaoView.frame.width * 0.35,
-                                         y: kaoView.frame.origin.y + kaoView.frame.height * 0.7,
-                                         width: kaoView.frame.width * 0.3,
-                                         height: kaoView.frame.width * 0.2)
-        let mimiLeftCGRect: CGRect = CGRect(x: kaoView.frame.origin.x - kaoView.frame.width * 0.1,
-                                            y: kaoView.frame.origin.y + kaoView.frame.height * 0.45,
-                                            width: kaoView.frame.width * 0.2,
-                                            height: kaoView.frame.width * 0.25)
-        let mimiRightCGRect: CGRect = CGRect(x: kaoView.frame.origin.x + kaoView.frame.width * 0.92,
-                                             y: kaoView.frame.origin.y + kaoView.frame.height * 0.45,
-                                             width: kaoView.frame.width * 0.2,
-                                             height: kaoView.frame.width * 0.25)
-
         kamiView = KamiView(frame: kamiCGRect)
         meLeftView = MeView(frame: meLeftCGRect)
         meRightView = MeView(frame: meRightCGRect)
@@ -67,10 +50,9 @@ class PlayViewController: UIViewController {
         kuchiView = KuchiView(frame: kuchiCGRect)
         mimiLeftView = MimiView(frame: mimiLeftCGRect)
         mimiRightView = MimiView(frame: mimiRightCGRect)
-        
         mimiLeftView.button.setImage(UIImage(named: "mimi_left"), for: .normal)
         mimiRightView.button.setImage(UIImage(named: "mimi_right"), for: .normal)
-
+        
         self.view.addSubview(mimiLeftView)
         self.view.addSubview(mimiRightView)
         self.view.addSubview(kaoView)
@@ -79,6 +61,9 @@ class PlayViewController: UIViewController {
         self.view.addSubview(meRightView)
         self.view.addSubview(hanaView)
         self.view.addSubview(kuchiView)
+        
+        touchNameLabel = TouchNameView(frame: CGRect(x: 0.0, y: view.frame.height * 0.1, width: view.frame.width, height: 80))
+        self.view.addSubview(touchNameLabel)
 
         kaoView.button.addTarget(self, action: #selector(kaoViewClicked(sender:)), for: UIControl.Event.touchUpInside)
         kamiView.button.addTarget(self, action: #selector(kamiViewClicked(sender:)), for: UIControl.Event.touchUpInside)
@@ -92,34 +77,56 @@ class PlayViewController: UIViewController {
     
     @objc func kaoViewClicked(sender: UIButton) {
         print("kaoViewClicked")
-        kaoView.anim()
+        animOff()
+        kaoView.animOn()
+        touchNameLabel.setLabel(name: kaoView.name)
     }
     
     @objc func kamiViewClicked(sender: UIButton) {
         print("kamiViewClicked")
-        kamiView.anim()
+        animOff()
+        kamiView.animOn()
+        touchNameLabel.setLabel(name: kamiView.name)
     }
     
     @objc func meViewClicked(sender: UIButton) {
         print("meViewClicked")
-        meLeftView.anim()
-        meRightView.anim()
+        animOff()
+        meLeftView.animOn()
+        meRightView.animOn()
+        touchNameLabel.setLabel(name: meLeftView.name)
     }
     
     @objc func hanaViewClicked(sender: UIButton) {
         print("hanaViewClicked")
-        hanaView.anim()
+        animOff()
+        hanaView.animOn()
+        touchNameLabel.setLabel(name: hanaView.name)
     }
     
     @objc func mimiViewClicked(sender: UIButton) {
         print("mimiViewClicked")
-        mimiLeftView.anim()
-        mimiRightView.anim()
+        animOff()
+        mimiLeftView.animOn()
+        mimiRightView.animOn()
+        touchNameLabel.setLabel(name: mimiLeftView.name)
     }
     
     @objc func kuchiViewClicked(sender: UIButton) {
         print("kuchiViewClicked")
-        kuchiView.anim()
+        animOff()
+        kuchiView.animOn()
+        touchNameLabel.setLabel(name: kuchiView.name)
     }
     
+    func animOff() {
+        kaoView.animOff()
+        kamiView.animOff()
+        meLeftView.animOff()
+        meRightView.animOff()
+        hanaView.animOff()
+        kuchiView.animOff()
+        mimiLeftView.animOff()
+        mimiRightView.animOff()
+    }
 }
