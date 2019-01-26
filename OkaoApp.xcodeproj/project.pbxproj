@@ -1,0 +1,379 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2B731E7121FCCA8200A7E34E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B731E7021FCCA8200A7E34E /* AppDelegate.swift */; };
+		2B731E7321FCCA8200A7E34E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B731E7221FCCA8200A7E34E /* ViewController.swift */; };
+		2B731E7621FCCA8200A7E34E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B731E7421FCCA8200A7E34E /* Main.storyboard */; };
+		2B731E7821FCCA8300A7E34E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B731E7721FCCA8300A7E34E /* Assets.xcassets */; };
+		2B731E7B21FCCA8300A7E34E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B731E7921FCCA8300A7E34E /* LaunchScreen.storyboard */; };
+		2B731E8521FCCB8100A7E34E /* HanaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B731E8221FCCB8100A7E34E /* HanaView.swift */; };
+		2B731E8621FCCB8100A7E34E /* KamiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B731E8321FCCB8100A7E34E /* KamiView.swift */; };
+		2B731E8721FCCB8100A7E34E /* KaoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B731E8421FCCB8100A7E34E /* KaoView.swift */; };
+		2B731E8E21FCCB9200A7E34E /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B731E8821FCCB9200A7E34E /* TitleView.swift */; };
+		2B731E8F21FCCB9200A7E34E /* KuchiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B731E8921FCCB9200A7E34E /* KuchiView.swift */; };
+		2B731E9021FCCB9200A7E34E /* MimiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B731E8A21FCCB9200A7E34E /* MimiView.swift */; };
+		2B731E9121FCCB9200A7E34E /* MeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B731E8B21FCCB9200A7E34E /* MeView.swift */; };
+		2B731E9221FCCB9200A7E34E /* StartButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B731E8C21FCCB9200A7E34E /* StartButtonView.swift */; };
+		2B731E9321FCCB9200A7E34E /* PlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B731E8D21FCCB9200A7E34E /* PlayViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2B731E6D21FCCA8200A7E34E /* OkaoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OkaoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B731E7021FCCA8200A7E34E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2B731E7221FCCA8200A7E34E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2B731E7521FCCA8200A7E34E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2B731E7721FCCA8300A7E34E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2B731E7A21FCCA8300A7E34E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2B731E7C21FCCA8300A7E34E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B731E8221FCCB8100A7E34E /* HanaView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HanaView.swift; sourceTree = "<group>"; };
+		2B731E8321FCCB8100A7E34E /* KamiView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KamiView.swift; sourceTree = "<group>"; };
+		2B731E8421FCCB8100A7E34E /* KaoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KaoView.swift; sourceTree = "<group>"; };
+		2B731E8821FCCB9200A7E34E /* TitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
+		2B731E8921FCCB9200A7E34E /* KuchiView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KuchiView.swift; sourceTree = "<group>"; };
+		2B731E8A21FCCB9200A7E34E /* MimiView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MimiView.swift; sourceTree = "<group>"; };
+		2B731E8B21FCCB9200A7E34E /* MeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeView.swift; sourceTree = "<group>"; };
+		2B731E8C21FCCB9200A7E34E /* StartButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartButtonView.swift; sourceTree = "<group>"; };
+		2B731E8D21FCCB9200A7E34E /* PlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2B731E6A21FCCA8200A7E34E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2B731E6421FCCA8200A7E34E = {
+			isa = PBXGroup;
+			children = (
+				2B731E6F21FCCA8200A7E34E /* OkaoApp */,
+				2B731E6E21FCCA8200A7E34E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2B731E6E21FCCA8200A7E34E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2B731E6D21FCCA8200A7E34E /* OkaoApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2B731E6F21FCCA8200A7E34E /* OkaoApp */ = {
+			isa = PBXGroup;
+			children = (
+				2B731E7021FCCA8200A7E34E /* AppDelegate.swift */,
+				2B731E7221FCCA8200A7E34E /* ViewController.swift */,
+				2B731E8821FCCB9200A7E34E /* TitleView.swift */,
+				2B731E8C21FCCB9200A7E34E /* StartButtonView.swift */,
+				2B731E8D21FCCB9200A7E34E /* PlayViewController.swift */,
+				2B731E8421FCCB8100A7E34E /* KaoView.swift */,
+				2B731E8321FCCB8100A7E34E /* KamiView.swift */,
+				2B731E8B21FCCB9200A7E34E /* MeView.swift */,
+				2B731E8A21FCCB9200A7E34E /* MimiView.swift */,
+				2B731E8921FCCB9200A7E34E /* KuchiView.swift */,
+				2B731E8221FCCB8100A7E34E /* HanaView.swift */,
+				2B731E7421FCCA8200A7E34E /* Main.storyboard */,
+				2B731E7721FCCA8300A7E34E /* Assets.xcassets */,
+				2B731E7921FCCA8300A7E34E /* LaunchScreen.storyboard */,
+				2B731E7C21FCCA8300A7E34E /* Info.plist */,
+			);
+			path = OkaoApp;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2B731E6C21FCCA8200A7E34E /* OkaoApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B731E7F21FCCA8300A7E34E /* Build configuration list for PBXNativeTarget "OkaoApp" */;
+			buildPhases = (
+				2B731E6921FCCA8200A7E34E /* Sources */,
+				2B731E6A21FCCA8200A7E34E /* Frameworks */,
+				2B731E6B21FCCA8200A7E34E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OkaoApp;
+			productName = OkaoApp;
+			productReference = 2B731E6D21FCCA8200A7E34E /* OkaoApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2B731E6521FCCA8200A7E34E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "早坂甫";
+				TargetAttributes = {
+					2B731E6C21FCCA8200A7E34E = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = 2B731E6821FCCA8200A7E34E /* Build configuration list for PBXProject "OkaoApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2B731E6421FCCA8200A7E34E;
+			productRefGroup = 2B731E6E21FCCA8200A7E34E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2B731E6C21FCCA8200A7E34E /* OkaoApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2B731E6B21FCCA8200A7E34E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B731E7B21FCCA8300A7E34E /* LaunchScreen.storyboard in Resources */,
+				2B731E7821FCCA8300A7E34E /* Assets.xcassets in Resources */,
+				2B731E7621FCCA8200A7E34E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2B731E6921FCCA8200A7E34E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B731E9021FCCB9200A7E34E /* MimiView.swift in Sources */,
+				2B731E8721FCCB8100A7E34E /* KaoView.swift in Sources */,
+				2B731E7321FCCA8200A7E34E /* ViewController.swift in Sources */,
+				2B731E9221FCCB9200A7E34E /* StartButtonView.swift in Sources */,
+				2B731E9321FCCB9200A7E34E /* PlayViewController.swift in Sources */,
+				2B731E7121FCCA8200A7E34E /* AppDelegate.swift in Sources */,
+				2B731E8621FCCB8100A7E34E /* KamiView.swift in Sources */,
+				2B731E8F21FCCB9200A7E34E /* KuchiView.swift in Sources */,
+				2B731E9121FCCB9200A7E34E /* MeView.swift in Sources */,
+				2B731E8521FCCB8100A7E34E /* HanaView.swift in Sources */,
+				2B731E8E21FCCB9200A7E34E /* TitleView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2B731E7421FCCA8200A7E34E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2B731E7521FCCA8200A7E34E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2B731E7921FCCA8300A7E34E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2B731E7A21FCCA8300A7E34E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2B731E7D21FCCA8300A7E34E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2B731E7E21FCCA8300A7E34E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2B731E8021FCCA8300A7E34E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2989S56PL9;
+				INFOPLIST_FILE = OkaoApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.ne.softbank.show-judy-and-punch.OkaoApp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2B731E8121FCCA8300A7E34E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2989S56PL9;
+				INFOPLIST_FILE = OkaoApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.ne.softbank.show-judy-and-punch.OkaoApp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2B731E6821FCCA8200A7E34E /* Build configuration list for PBXProject "OkaoApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B731E7D21FCCA8300A7E34E /* Debug */,
+				2B731E7E21FCCA8300A7E34E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2B731E7F21FCCA8300A7E34E /* Build configuration list for PBXNativeTarget "OkaoApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B731E8021FCCA8300A7E34E /* Debug */,
+				2B731E8121FCCA8300A7E34E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2B731E6521FCCA8200A7E34E /* Project object */;
+}
