@@ -40,10 +40,10 @@ class KuchiView: UIView {
         anim.duration = 1.0
         anim.autoreverses = true
         anim.repeatCount = HUGE
-        button.layer.add(anim, forKey: "kuchianim")
+        button.layer.add(anim, forKey: "anmiKey")
     }
     
     func animOff() {
-        button.layer.removeAnimation(forKey: "kuchianim")
+        button.layer.removeAnimation(forKey: "anmiKey")
     }
 }

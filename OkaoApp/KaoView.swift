@@ -40,10 +40,10 @@ class KaoView: UIView {
         anim.duration = 1.0
         anim.autoreverses = true
         anim.repeatCount = HUGE
-        button.layer.add(anim, forKey: "kaoanim")
+        button.layer.add(anim, forKey: "anmiKey")
     }
 
     func animOff() {
-        button.layer.removeAnimation(forKey: "kaoanim")
+        button.layer.removeAnimation(forKey: "anmiKey")
     }
 }

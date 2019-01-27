@@ -1,18 +1,19 @@
 //
-//  MimiView.swift
+//  MayugeView.swift
 //  OkaoApp
 //
-//  Created by 早坂甫 on 2019/01/26.
+//  Created by 早坂甫 on 2019/01/27.
 //  Copyright © 2019年 早坂甫. All rights reserved.
 //
 
 import UIKit
 
-class MimiView: UIView {
+class MayugeView: UIView {
 
-    let name: String = "みみ"
+
+    let name: String = "まゆげ"
     var button: UIButton!
-
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
@@ -21,6 +22,7 @@ class MimiView: UIView {
         super.init(frame: frame)
         
         button = UIButton()
+        button.setImage(UIImage(named: "mayuge"), for: UIControl.State.normal)
         button.adjustsImageWhenHighlighted = false
         button.imageView?.contentMode = UIView.ContentMode.scaleAspectFit
         button.contentHorizontalAlignment = .fill
@@ -41,7 +43,7 @@ class MimiView: UIView {
         anim.repeatCount = HUGE
         button.layer.add(anim, forKey: "anmiKey")
     }
-
+    
     func animOff() {
         button.layer.removeAnimation(forKey: "anmiKey")
     }

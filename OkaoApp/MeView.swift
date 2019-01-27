@@ -40,10 +40,10 @@ class MeView: UIView {
         anim.duration = 1.0
         anim.autoreverses = true
         anim.repeatCount = HUGE
-        button.layer.add(anim, forKey: "meanim")
+        button.layer.add(anim, forKey: "anmiKey")
     }
     
     func animOff() {
-        button.layer.removeAnimation(forKey: "meanim")
+        button.layer.removeAnimation(forKey: "anmiKey")
     }
 }

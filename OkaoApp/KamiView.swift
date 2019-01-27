@@ -40,10 +40,10 @@ class KamiView: UIView {
         anim.duration = 1.0
         anim.autoreverses = true
         anim.repeatCount = HUGE
-        button.layer.add(anim, forKey: "kamianim")
+        button.layer.add(anim, forKey: "anmiKey")
     }
     
     func animOff() {
-        button.layer.removeAnimation(forKey: "kamianim")
+        button.layer.removeAnimation(forKey: "anmiKey")
     }
 }

@@ -12,6 +12,8 @@ class PlayViewController: UIViewController {
     
     var kaoView: KaoView!
     var kamiView: KamiView!
+    var mayugeLeftView: MayugeView!
+    var mayugeRightView: MayugeView!
     var meLeftView: MeView!
     var meRightView: MeView!
     var hanaView: HanaView!
@@ -20,8 +22,6 @@ class PlayViewController: UIViewController {
     var mimiRightView: MimiView!
     var touchNameLabel: TouchNameView!
     
-    var activeView: UIView!
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -34,7 +34,9 @@ class PlayViewController: UIViewController {
         let kaoHeight: CGFloat = view.frame.width * 0.85
         
         let kaoCGRect = CGRect(x: kaoX, y: kaoY, width: kaoWidth, height: kaoHeight)
-        let kamiCGRect = CGRect(x: kaoX - 10, y: kaoY - 100, width: kaoWidth + 20, height: kaoWidth * 0.7)
+        let kamiCGRect = CGRect(x: kaoX - 10, y: kaoY - 90, width: kaoWidth + 20, height: kaoWidth * 0.7)
+        let mayugeLeftCGRect = CGRect(x: kaoX + kaoWidth * 0.15, y: kaoY + kaoHeight * 0.3, width: kaoWidth * 0.2, height: kaoWidth * 0.2)
+        let mayugeRightCGRect = CGRect(x: kaoX + kaoWidth * 0.65, y: kaoY + kaoHeight * 0.3, width: kaoWidth * 0.2, height: kaoWidth * 0.2)
         let meLeftCGRect = CGRect(x: kaoX + kaoWidth * 0.15, y: kaoY + kaoHeight * 0.45, width: kaoWidth * 0.2, height: kaoWidth * 0.2)
         let meRightCGRect = CGRect(x: kaoX + kaoWidth * 0.65, y: kaoY + kaoHeight * 0.45, width: kaoWidth * 0.2, height: kaoWidth * 0.2)
         let hanaCGRect = CGRect(x: kaoX + kaoWidth * 0.45, y: kaoY + kaoHeight * 0.5, width: kaoWidth * 0.1, height: kaoWidth * 0.2)
@@ -44,6 +46,8 @@ class PlayViewController: UIViewController {
 
         kaoView = KaoView(frame: kaoCGRect)
         kamiView = KamiView(frame: kamiCGRect)
+        mayugeLeftView = MayugeView(frame: mayugeLeftCGRect)
+        mayugeRightView = MayugeView(frame: mayugeRightCGRect)
         meLeftView = MeView(frame: meLeftCGRect)
         meRightView = MeView(frame: meRightCGRect)
         hanaView = HanaView(frame: hanaCGRect)
@@ -56,6 +60,8 @@ class PlayViewController: UIViewController {
         self.view.addSubview(mimiLeftView)
         self.view.addSubview(mimiRightView)
         self.view.addSubview(kaoView)
+        self.view.addSubview(mayugeLeftView)
+        self.view.addSubview(mayugeRightView)
         self.view.addSubview(kamiView)
         self.view.addSubview(meLeftView)
         self.view.addSubview(meRightView)
@@ -67,6 +73,8 @@ class PlayViewController: UIViewController {
 
         kaoView.button.addTarget(self, action: #selector(kaoViewClicked(sender:)), for: UIControl.Event.touchUpInside)
         kamiView.button.addTarget(self, action: #selector(kamiViewClicked(sender:)), for: UIControl.Event.touchUpInside)
+        mayugeLeftView.button.addTarget(self, action: #selector(mayugeViewClicked(sender:)), for: UIControl.Event.touchUpInside)
+        mayugeRightView.button.addTarget(self, action: #selector(mayugeViewClicked(sender:)), for: UIControl.Event.touchUpInside)
         meLeftView.button.addTarget(self, action: #selector(meViewClicked(sender:)), for: UIControl.Event.touchUpInside)
         meRightView.button.addTarget(self, action: #selector(meViewClicked(sender:)), for: UIControl.Event.touchUpInside)
         hanaView.button.addTarget(self, action: #selector(hanaViewClicked(sender:)), for: UIControl.Event.touchUpInside)
@@ -87,6 +95,14 @@ class PlayViewController: UIViewController {
         animOff()
         kamiView.animOn()
         touchNameLabel.setLabel(name: kamiView.name)
+    }
+    
+    @objc func mayugeViewClicked(sender: UIButton) {
+        print("mayugeViewClicked")
+        animOff()
+        mayugeLeftView.animOn()
+        mayugeRightView.animOn()
+        touchNameLabel.setLabel(name: mayugeLeftView.name)
     }
     
     @objc func meViewClicked(sender: UIButton) {
@@ -122,6 +138,8 @@ class PlayViewController: UIViewController {
     func animOff() {
         kaoView.animOff()
         kamiView.animOff()
+        mayugeLeftView.animOff()
+        mayugeRightView.animOff()
         meLeftView.animOff()
         meRightView.animOff()
         hanaView.animOff()
