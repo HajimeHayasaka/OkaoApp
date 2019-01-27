@@ -12,6 +12,7 @@ class TitleView: UIView {
 
     var imageView: UIImageView!
     
+    
     // UIViewクラスを使う場合に必要な初期化処理（その１）
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)

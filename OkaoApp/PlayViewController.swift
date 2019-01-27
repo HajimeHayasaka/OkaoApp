@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class PlayViewController: UIViewController {
     
@@ -22,8 +23,13 @@ class PlayViewController: UIViewController {
     var mimiRightView: MimiView!
     var touchNameLabel: TouchNameView!
     
+    var audioPlayer : AVAudioPlayer!
+    var soundPlayer : AVAudioPlayer!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        playMusic()
         
         self.view.backgroundColor = UIColor.white
         self.navigationController?.setNavigationBarHidden(true, animated: false)
@@ -85,6 +91,7 @@ class PlayViewController: UIViewController {
     
     @objc func kaoViewClicked(sender: UIButton) {
         print("kaoViewClicked")
+        touchSound()
         animOff()
         kaoView.animOn()
         touchNameLabel.setLabel(name: kaoView.name)
@@ -92,6 +99,7 @@ class PlayViewController: UIViewController {
     
     @objc func kamiViewClicked(sender: UIButton) {
         print("kamiViewClicked")
+        touchSound()
         animOff()
         kamiView.animOn()
         touchNameLabel.setLabel(name: kamiView.name)
@@ -99,6 +107,7 @@ class PlayViewController: UIViewController {
     
     @objc func mayugeViewClicked(sender: UIButton) {
         print("mayugeViewClicked")
+        touchSound()
         animOff()
         mayugeLeftView.animOn()
         mayugeRightView.animOn()
@@ -107,6 +116,7 @@ class PlayViewController: UIViewController {
     
     @objc func meViewClicked(sender: UIButton) {
         print("meViewClicked")
+        touchSound()
         animOff()
         meLeftView.animOn()
         meRightView.animOn()
@@ -115,6 +125,7 @@ class PlayViewController: UIViewController {
     
     @objc func hanaViewClicked(sender: UIButton) {
         print("hanaViewClicked")
+        touchSound()
         animOff()
         hanaView.animOn()
         touchNameLabel.setLabel(name: hanaView.name)
@@ -122,6 +133,7 @@ class PlayViewController: UIViewController {
     
     @objc func mimiViewClicked(sender: UIButton) {
         print("mimiViewClicked")
+        touchSound()
         animOff()
         mimiLeftView.animOn()
         mimiRightView.animOn()
@@ -130,6 +142,7 @@ class PlayViewController: UIViewController {
     
     @objc func kuchiViewClicked(sender: UIButton) {
         print("kuchiViewClicked")
+        touchSound()
         animOff()
         kuchiView.animOn()
         touchNameLabel.setLabel(name: kuchiView.name)
@@ -147,4 +160,33 @@ class PlayViewController: UIViewController {
         mimiLeftView.animOff()
         mimiRightView.animOff()
     }
+    
+    func playMusic() {
+        let soundFilePath : String = Bundle.main.path(forResource: "BGM_play", ofType: "mp3")!
+        let fileURL : URL = URL(fileURLWithPath: soundFilePath)
+        
+        do{
+            audioPlayer = try AVAudioPlayer(contentsOf: fileURL)
+        }
+        catch{
+        }
+        //numberOfLoopsに-1を指定すると無限ループする。
+        audioPlayer.numberOfLoops = -1
+        audioPlayer.volume = 0.5
+        audioPlayer.play()
+    }
+
+    func touchSound() {
+        let soundFilePath : String = Bundle.main.path(forResource: "Touch", ofType: "mp3")!
+        let fileURL : URL = URL(fileURLWithPath: soundFilePath)
+        
+        do{
+            soundPlayer = try AVAudioPlayer(contentsOf: fileURL)
+        }
+        catch{
+        }
+        soundPlayer.currentTime = 0
+        soundPlayer.play()
+    }
+
 }
