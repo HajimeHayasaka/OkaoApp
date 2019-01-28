@@ -31,16 +31,16 @@ class PlayViewController: UIViewController {
         
         playMusic()
         
-        self.view.backgroundColor = UIColor.white
+        self.view.backgroundColor = UIColor(named: "bgcolor")
         self.navigationController?.setNavigationBarHidden(true, animated: false)
         
-        let kaoX: CGFloat = view.frame.width * 0.05
-        let kaoY: CGFloat = view.frame.height * 0.4
-        let kaoWidth: CGFloat = view.frame.width * 0.85
+        let kaoX: CGFloat = view.frame.width * 0.1
+        let kaoY: CGFloat = view.frame.height * 0.45
+        let kaoWidth: CGFloat = view.frame.width * 0.8
         let kaoHeight: CGFloat = view.frame.width * 0.85
         
         let kaoCGRect = CGRect(x: kaoX, y: kaoY, width: kaoWidth, height: kaoHeight)
-        let kamiCGRect = CGRect(x: kaoX - 10, y: kaoY - 90, width: kaoWidth + 20, height: kaoWidth * 0.7)
+        let kamiCGRect = CGRect(x: kaoX - 15, y: kaoY - 120, width: kaoWidth + 30, height: kaoWidth * 0.7)
         let mayugeLeftCGRect = CGRect(x: kaoX + kaoWidth * 0.15, y: kaoY + kaoHeight * 0.3, width: kaoWidth * 0.2, height: kaoWidth * 0.2)
         let mayugeRightCGRect = CGRect(x: kaoX + kaoWidth * 0.65, y: kaoY + kaoHeight * 0.3, width: kaoWidth * 0.2, height: kaoWidth * 0.2)
         let meLeftCGRect = CGRect(x: kaoX + kaoWidth * 0.15, y: kaoY + kaoHeight * 0.45, width: kaoWidth * 0.2, height: kaoWidth * 0.2)
