@@ -77,8 +77,10 @@ class PlayViewController: UIViewController {
         touchNameLabel = TouchNameView(frame: CGRect(x: 0.0, y: view.frame.height * 0.1, width: view.frame.width, height: 80))
         self.view.addSubview(touchNameLabel)
 
-        kaoView.button.addTarget(self, action: #selector(kaoViewClicked(sender:)), for: UIControl.Event.touchUpInside)
-        kamiView.button.addTarget(self, action: #selector(kamiViewClicked(sender:)), for: UIControl.Event.touchUpInside)
+        kaoView.button.addTarget(self, action: #selector(buttonClicked(sender:)), for: UIControl.Event.touchUpInside)
+        kaoView.button.tag = 0
+        kamiView.button.addTarget(self, action: #selector(buttonClicked(sender:)), for: UIControl.Event.touchUpInside)
+        kamiView.button.tag = 1
         mayugeLeftView.button.addTarget(self, action: #selector(mayugeViewClicked(sender:)), for: UIControl.Event.touchUpInside)
         mayugeRightView.button.addTarget(self, action: #selector(mayugeViewClicked(sender:)), for: UIControl.Event.touchUpInside)
         meLeftView.button.addTarget(self, action: #selector(meViewClicked(sender:)), for: UIControl.Event.touchUpInside)
@@ -89,8 +91,25 @@ class PlayViewController: UIViewController {
         mimiRightView.button.addTarget(self, action: #selector(mimiViewClicked(sender:)), for: UIControl.Event.touchUpInside)
     }
     
+    @objc func buttonClicked(sender: UIButton) {
+        touchSound()
+        animOff()
+        if sender.tag == 0 {
+            print("kaoViewClicked")
+            print(sender.tag)
+            kaoView.animOn()
+            touchNameLabel.setLabel(name: kaoView.name)
+        } else if sender.tag == 1 {
+            print("kamiViewClicked")
+            print(sender.tag)
+            kamiView.animOn()
+            touchNameLabel.setLabel(name: kamiView.name)
+        }
+    }
+/*
     @objc func kaoViewClicked(sender: UIButton) {
         print("kaoViewClicked")
+        print(sender.tag)
         touchSound()
         animOff()
         kaoView.animOn()
@@ -99,12 +118,13 @@ class PlayViewController: UIViewController {
     
     @objc func kamiViewClicked(sender: UIButton) {
         print("kamiViewClicked")
+        print(sender.tag)
         touchSound()
         animOff()
         kamiView.animOn()
         touchNameLabel.setLabel(name: kamiView.name)
     }
-    
+*/
     @objc func mayugeViewClicked(sender: UIButton) {
         print("mayugeViewClicked")
         touchSound()

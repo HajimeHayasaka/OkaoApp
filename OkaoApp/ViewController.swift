@@ -19,8 +19,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        playMusic()
-        
         let titleCGRect: CGRect = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
         let startCGRect: CGRect = CGRect(x: view.frame.width * 0.3, y: view.frame.height * 0.8, width: view.frame.width * 0.4, height: 100)
         
@@ -36,10 +34,15 @@ class ViewController: UIViewController {
         startButton.button.addTarget(self, action: #selector(startButtonClicked(sender:)), for: UIControl.Event.touchUpInside)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        playMusic()
+    }
+    
     @objc func startButtonClicked(sender: UIButton) {
         print("startButtonClicked")
         startSound()
-        audioPlayer.stop()
+        audioPlayer = nil // delegateで処理する方法もある。
         let secondVC: PlayViewController = PlayViewController()
         self.navigationController?.pushViewController(secondVC, animated: true)
     }
