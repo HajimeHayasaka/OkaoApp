@@ -26,24 +26,25 @@ class KamiView: UIView {
         button.imageView?.contentMode = UIView.ContentMode.scaleToFill
         button.contentHorizontalAlignment = .fill
         button.contentVerticalAlignment = .fill
-        self.addSubview(button)
+        self.addSubview(button)        
     }
     
     override func layoutSubviews() {
         button.frame = CGRect(x: 0.0, y: 0.0, width: frame.width, height: frame.height)
     }
     
+    // 拡大縮小アニメーション
     func animOn() {
-        let anim = CABasicAnimation(keyPath: "transform.rotation.z")
-        anim.fromValue = -(Double.pi / 16)
-        anim.toValue = Double.pi / 16
+        let anim = CABasicAnimation(keyPath: "transform.scale")
+        anim.fromValue = 1.0
+        anim.toValue = 1.2
         anim.duration = 1.0
         anim.autoreverses = true
         anim.repeatCount = HUGE
-        button.layer.add(anim, forKey: "anmiKey")
+        button.layer.add(anim, forKey: "animKey")
     }
     
     func animOff() {
-        button.layer.removeAnimation(forKey: "anmiKey")
+        button.layer.removeAnimation(forKey: "animKey")
     }
 }

@@ -40,10 +40,10 @@ class HanaView: UIView {
         anim.duration = 1.0
         anim.autoreverses = true
         anim.repeatCount = HUGE
-        button.layer.add(anim, forKey: "anmiKey")
+        button.layer.add(anim, forKey: "animKey")
     }
     
     func animOff() {
-        button.layer.removeAnimation(forKey: "anmiKey")
+        button.layer.removeAnimation(forKey: "animKey")
     }
 }

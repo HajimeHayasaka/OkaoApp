@@ -12,6 +12,7 @@ class KaoView: UIView {
 
     let name: String = "かお"
     var button: UIButton!
+    var animView: UIImageView!
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -27,23 +28,40 @@ class KaoView: UIView {
         button.contentHorizontalAlignment = .fill
         button.contentVerticalAlignment = .fill
         self.addSubview(button)
+        
+        animView = UIImageView()
+        animView.contentMode = UIView.ContentMode.scaleToFill
+        self.addSubview(animView)
     }
     
     override func layoutSubviews() {
         button.frame = CGRect(x: 0.0, y: 0.0, width: frame.width, height: frame.height)
+        animView.frame = CGRect(x: 0.0, y: 0.0, width: frame.width, height: frame.height)
     }
     
     func animOn() {
-        let anim = CABasicAnimation(keyPath: "transform.rotation.z")
-        anim.fromValue = -(Double.pi / 16)
-        anim.toValue = Double.pi / 16
-        anim.duration = 1.0
-        anim.autoreverses = true
-        anim.repeatCount = HUGE
-        button.layer.add(anim, forKey: "anmiKey")
+        let anim = CABasicAnimation(keyPath: "opacity")
+        anim.fromValue = 1.0
+        anim.toValue = 0.0
+        anim.duration = 3.0
+        anim.isRemovedOnCompletion = false
+        anim.fillMode = CAMediaTimingFillMode.forwards
+        button.layer.add(anim, forKey: "animKey")
+
+        let anim2 = CABasicAnimation(keyPath: "opacity")
+        anim2.fromValue = 0.0
+        anim2.toValue = 1.0
+        anim2.duration = 1.0
+        anim2.isRemovedOnCompletion = false
+        anim2.fillMode = CAMediaTimingFillMode.forwards
+        animView.image = UIImage(named: "kao_anim")
+        animView.layer.add(anim2, forKey: "animKey")
     }
 
     func animOff() {
-        button.layer.removeAnimation(forKey: "anmiKey")
+        button.layer.removeAnimation(forKey: "animKey")
+        button.setImage(UIImage(named: "kao"), for: UIControl.State.normal)
+        animView.layer.removeAnimation(forKey: "animKey")
+        animView.image = nil
     }
 }

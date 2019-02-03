@@ -25,6 +25,7 @@
 		2BF680212201E572007111C6 /* BGM_play.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2BF6801F2201E571007111C6 /* BGM_play.mp3 */; };
 		2BF680242201E590007111C6 /* Touch.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2BF680222201E590007111C6 /* Touch.mp3 */; };
 		2BF680252201E590007111C6 /* Start.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2BF680232201E590007111C6 /* Start.mp3 */; };
+		2BF6806322068074007111C6 /* OkaoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF6806222068074007111C6 /* OkaoView.swift */; };
 		2BFA314A21FCD65200BFF9A3 /* TouchNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFA314921FCD65200BFF9A3 /* TouchNameView.swift */; };
 		2BFA314C21FD54F200BFF9A3 /* MayugeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFA314B21FD54F200BFF9A3 /* MayugeView.swift */; };
 /* End PBXBuildFile section */
@@ -50,6 +51,7 @@
 		2BF6801F2201E571007111C6 /* BGM_play.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = BGM_play.mp3; sourceTree = "<group>"; };
 		2BF680222201E590007111C6 /* Touch.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Touch.mp3; sourceTree = "<group>"; };
 		2BF680232201E590007111C6 /* Start.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Start.mp3; sourceTree = "<group>"; };
+		2BF6806222068074007111C6 /* OkaoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OkaoView.swift; sourceTree = "<group>"; };
 		2BFA314921FCD65200BFF9A3 /* TouchNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchNameView.swift; sourceTree = "<group>"; };
 		2BFA314B21FD54F200BFF9A3 /* MayugeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MayugeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -92,6 +94,7 @@
 				2B731E8C21FCCB9200A7E34E /* StartButtonView.swift */,
 				2B731E8D21FCCB9200A7E34E /* PlayViewController.swift */,
 				2BFA314921FCD65200BFF9A3 /* TouchNameView.swift */,
+				2BF6806222068074007111C6 /* OkaoView.swift */,
 				2B731E8421FCCB8100A7E34E /* KaoView.swift */,
 				2B731E8321FCCB8100A7E34E /* KamiView.swift */,
 				2BFA314B21FD54F200BFF9A3 /* MayugeView.swift */,
@@ -202,6 +205,7 @@
 			files = (
 				2B731E9021FCCB9200A7E34E /* MimiView.swift in Sources */,
 				2B731E8721FCCB8100A7E34E /* KaoView.swift in Sources */,
+				2BF6806322068074007111C6 /* OkaoView.swift in Sources */,
 				2B731E7321FCCA8200A7E34E /* ViewController.swift in Sources */,
 				2B731E9221FCCB9200A7E34E /* StartButtonView.swift in Sources */,
 				2B731E9321FCCB9200A7E34E /* PlayViewController.swift in Sources */,

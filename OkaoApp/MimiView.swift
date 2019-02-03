@@ -19,7 +19,7 @@ class MimiView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
+        print(frame.origin.y)
         button = UIButton()
         button.adjustsImageWhenHighlighted = false
         button.imageView?.contentMode = UIView.ContentMode.scaleAspectFit
@@ -33,16 +33,18 @@ class MimiView: UIView {
     }
     
     func animOn() {
-        let anim = CABasicAnimation(keyPath: "transform.rotation.z")
-        anim.fromValue = -(Double.pi / 16)
-        anim.toValue = Double.pi / 16
-        anim.duration = 1.0
+        let anim = CABasicAnimation(keyPath: "position.y")
+        print(button.frame.origin.y)
+        let centerPos = button.frame.height / 2
+        anim.fromValue = centerPos - 5.0
+        anim.toValue = centerPos + 5.0
+        anim.duration = 0.2
         anim.autoreverses = true
         anim.repeatCount = HUGE
-        button.layer.add(anim, forKey: "anmiKey")
+        button.layer.add(anim, forKey: "animKey")
     }
 
     func animOff() {
-        button.layer.removeAnimation(forKey: "anmiKey")
+        button.layer.removeAnimation(forKey: "animKey")
     }
 }
