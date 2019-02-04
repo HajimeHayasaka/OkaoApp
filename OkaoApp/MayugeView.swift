@@ -34,13 +34,15 @@ class MayugeView: UIView {
         button.frame = CGRect(x: 0.0, y: 0.0, width: frame.width, height: frame.height)
     }
     
-    // ぐるぐる回転アニメーション
+    // 上下アニメーション
     func animOn() {
-        // 360度回転アニメーション
-        let anim = CABasicAnimation(keyPath: "transform.rotation.z")
-        anim.fromValue = 0.0
-        anim.toValue = Double.pi * 2
-        anim.duration = 1.0
+        let anim = CABasicAnimation(keyPath: "position.y")
+        print(button.frame.origin.y)
+        let centerPos = button.frame.height / 2
+        anim.fromValue = centerPos - 5.0
+        anim.toValue = centerPos + 5.0
+        anim.duration = 0.2
+        anim.autoreverses = true
         anim.repeatCount = HUGE
         button.layer.add(anim, forKey: "animKey")
     }

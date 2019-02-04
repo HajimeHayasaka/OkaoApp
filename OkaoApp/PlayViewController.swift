@@ -31,11 +31,11 @@ class PlayViewController: UIViewController {
         
         self.view.backgroundColor = UIColor(named: "bgcolor")
         self.navigationController?.setNavigationBarHidden(true, animated: false)
-        
+                
         okaoView = OkaoView(frame: CGRect(x: 0.0, y: 0.0, width: view.frame.width, height: view.frame.height))
         self.view.addSubview(okaoView)
         
-        touchNameLabel = TouchNameView(frame: CGRect(x: 0.0, y: view.frame.height * 0.1, width: view.frame.width, height: 80))
+        touchNameLabel = TouchNameView(frame: CGRect(x: 0.0, y: view.frame.height * 0.1, width: view.frame.width, height: 70))
         self.view.addSubview(touchNameLabel)
 
         okaoView.kaoView.button.addTarget(self, action: #selector(buttonClicked(sender:)), for: UIControl.Event.touchUpInside)

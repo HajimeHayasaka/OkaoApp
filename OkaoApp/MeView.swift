@@ -38,11 +38,12 @@ class MeView: UIView {
         // 画像切り替え
         button.setImage(UIImage(named: "me_anim"), for: UIControl.State.normal)
         
-        // 360度回転アニメーション
+        // メトロノームのような動き
         let anim1 = CABasicAnimation(keyPath: "transform.rotation.z")
-        anim1.fromValue = 0.0
-        anim1.toValue = Double.pi * 2
+        anim1.fromValue = -(Double.pi / 16)
+        anim1.toValue = Double.pi / 16
         anim1.duration = 1.0
+        anim1.autoreverses = true
         anim1.repeatCount = HUGE
         
         // 拡大縮小アニメーション
@@ -56,6 +57,7 @@ class MeView: UIView {
         // ２つのアニメーションをグループ化
         let animationGroup = CAAnimationGroup()
         animationGroup.duration = 1.0
+        animationGroup.autoreverses = true
         animationGroup.repeatCount = HUGE
         animationGroup.animations = [anim1, anim2]
         button.layer.add(animationGroup, forKey: "animKey")
