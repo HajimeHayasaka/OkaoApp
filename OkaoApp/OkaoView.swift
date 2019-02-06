@@ -28,7 +28,7 @@ class OkaoView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         let kaoX: CGFloat = frame.width * 0.1
-        let kaoY: CGFloat = frame.height * 0.4
+        let kaoY: CGFloat = frame.height * 0.35
         let kaoWidth: CGFloat = frame.width * 0.8
         let kaoHeight: CGFloat = frame.width * 0.85
         

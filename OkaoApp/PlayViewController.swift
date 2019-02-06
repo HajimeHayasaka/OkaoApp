@@ -18,27 +18,42 @@ enum Tag: Int {
     case hana
     case kuchi
     case mimi
+    case resetButton
 }
 
 class PlayViewController: UIViewController {
     
     var okaoView: OkaoView!
     var touchNameLabel: TouchNameView!
+    var animResetButton: ButtonView!
     var audioPlayer : AVAudioPlayer!
     var soundPlayer : AVAudioPlayer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // 背景色セット、ナビゲーションバー非表示
         self.view.backgroundColor = UIColor(named: "bgcolor")
         self.navigationController?.setNavigationBarHidden(true, animated: false)
-                
-        okaoView = OkaoView(frame: CGRect(x: 0.0, y: 0.0, width: view.frame.width, height: view.frame.height))
+        
+        // 各Viewの座標をセット
+        let okaoViewCGRect = CGRect(x: 0.0, y: 0.0, width: view.frame.width, height: view.frame.height)
+        let touchNameLabelCGRect = CGRect(x: 0.0, y: view.frame.height * 0.1, width: view.frame.width, height: 70)
+        let animResetButtonCGrect = CGRect(x: view.frame.width * 0.3, y: view.frame.height * 0.85, width: view.frame.width * 0.4, height: view.frame.height * 0.1)
+        
+        // 顔を表示
+        okaoView = OkaoView(frame: okaoViewCGRect)
         self.view.addSubview(okaoView)
         
-        touchNameLabel = TouchNameView(frame: CGRect(x: 0.0, y: view.frame.height * 0.1, width: view.frame.width, height: 70))
+        // タッチした箇所の名前を表示
+        touchNameLabel = TouchNameView(frame: touchNameLabelCGRect)
         self.view.addSubview(touchNameLabel)
         
+        // アニメーションストップボタン表示
+        animResetButton = ButtonView(frame: animResetButtonCGrect, image: "animResetButton")
+        self.view.addSubview(animResetButton)
+
+        // ボタン押下実行処理
         buttonAddTarget()
     }
     
@@ -86,60 +101,75 @@ class PlayViewController: UIViewController {
         okaoView.mimiLeftView.button.tag = Tag.mimi.rawValue
         okaoView.mimiRightView.button.addTarget(self, action: #selector(buttonClicked(sender:)), for: UIControl.Event.touchUpInside)
         okaoView.mimiRightView.button.tag = Tag.mimi.rawValue
+
+        // animResetButton
+        animResetButton.button.addTarget(self, action: #selector(buttonClicked(sender:)), for: UIControl.Event.touchUpInside)
+        animResetButton.button.tag = Tag.resetButton.rawValue
     }
     
     @objc func buttonClicked(sender: UIButton) {
         touchSound()
-        if sender.tag != Tag.kamiAnim.rawValue { okaoView.animOff() }
-        if sender.tag == Tag.kao.rawValue {
+        switch sender.tag {
+        case Tag.kao.rawValue:
             print("kaoViewClicked")
             print(sender.tag)
             okaoView.kaoView.animOn()
             touchNameLabel.setLabel(name: okaoView.kaoView.name)
-        } else if sender.tag == Tag.kami.rawValue {
+        case Tag.kami.rawValue:
             print("kamiViewClicked")
             print(sender.tag)
             okaoView.kamiView.animOn()
             touchNameLabel.setLabel(name: okaoView.kamiView.name)
-        } else if sender.tag == Tag.kamiAnim.rawValue {
+        case Tag.kamiAnim.rawValue:
             print("kamiViewClicked")
             print(sender.tag)
             okaoView.kamiView.animOff2()
             okaoView.kamiView.animOn2()
             touchNameLabel.setLabel(name: okaoView.kamiView.animName)
-        } else if sender.tag == Tag.mayuge.rawValue {
+            audioPlayer = nil
+            playMusic2()
+        case Tag.mayuge.rawValue:
             print("mayugeViewClicked")
             print(sender.tag)
             okaoView.mayugeLeftView.animOn()
             okaoView.mayugeRightView.animOn()
             touchNameLabel.setLabel(name: okaoView.mayugeLeftView.name)
-        } else if sender.tag == Tag.me.rawValue {
+        case Tag.me.rawValue:
             print("meViewClicked")
             print(sender.tag)
             okaoView.meLeftView.animOn()
             okaoView.meRightView.animOn()
             touchNameLabel.setLabel(name: okaoView.meLeftView.name)
-        } else if sender.tag == Tag.hana.rawValue {
+        case Tag.hana.rawValue:
             print("hanaViewClicked")
             print(sender.tag)
             okaoView.hanaView.animOn()
             touchNameLabel.setLabel(name: okaoView.hanaView.name)
-        } else if sender.tag == Tag.kuchi.rawValue {
+        case Tag.kuchi.rawValue:
             print("kuchiViewClicked")
             print(sender.tag)
             okaoView.kuchiView.animOn()
             touchNameLabel.setLabel(name: okaoView.kuchiView.name)
-        } else if sender.tag == Tag.mimi.rawValue {
+        case Tag.mimi.rawValue:
             print("mimiViewClicked")
             print(sender.tag)
             okaoView.mimiLeftView.animOn()
             okaoView.mimiRightView.animOn()
             touchNameLabel.setLabel(name: okaoView.mimiLeftView.name)
+        case Tag.resetButton.rawValue:
+            print("animResetButtonClicked")
+            print(sender.tag)
+            okaoView.animOff()
+            touchNameLabel.setLabel(name: "")
+            audioPlayer = nil
+            playMusic()
+        default:
+            break
         }
     }
         
     func playMusic() {
-        let soundFilePath : String = Bundle.main.path(forResource: "BGM_play", ofType: "mp3")!
+        let soundFilePath : String = Bundle.main.path(forResource: "BGM_play1", ofType: "mp3")!
         let fileURL : URL = URL(fileURLWithPath: soundFilePath)
         
         do{
@@ -152,7 +182,22 @@ class PlayViewController: UIViewController {
         audioPlayer.volume = 0.5
         audioPlayer.play()
     }
-
+    
+    func playMusic2() {
+        let soundFilePath : String = Bundle.main.path(forResource: "BGM_play2", ofType: "mp3")!
+        let fileURL : URL = URL(fileURLWithPath: soundFilePath)
+        
+        do{
+            audioPlayer = try AVAudioPlayer(contentsOf: fileURL)
+        }
+        catch{
+        }
+        //numberOfLoopsに-1を指定すると無限ループする。
+        audioPlayer.numberOfLoops = -1
+        audioPlayer.volume = 0.5
+        audioPlayer.play()
+    }
+    
     func touchSound() {
         let soundFilePath : String = Bundle.main.path(forResource: "Touch", ofType: "mp3")!
         let fileURL : URL = URL(fileURLWithPath: soundFilePath)

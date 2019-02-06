@@ -12,7 +12,7 @@ import AVFoundation
 class ViewController: UIViewController {
     
     var titleView: TitleView!
-    var startButton: StartButtonView!
+    var startButton: ButtonView!
     var audioPlayer : AVAudioPlayer!
     var soundPlayer : AVAudioPlayer!
     
@@ -20,16 +20,15 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         let titleCGRect: CGRect = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
-        let startCGRect: CGRect = CGRect(x: view.frame.width * 0.3, y: view.frame.height * 0.8, width: view.frame.width * 0.4, height: 100)
+        let startCGRect: CGRect = CGRect(x: view.frame.width * 0.25, y: view.frame.height * 0.8, width: view.frame.width * 0.5, height: view.frame.height * 0.12)
         
         self.view.backgroundColor = UIColor(named: "bgcolor")
         self.navigationController?.setNavigationBarHidden(true, animated: false)
         
         titleView = TitleView(frame: titleCGRect)
-        titleView.animOn()
         self.view.addSubview(titleView)
         
-        startButton = StartButtonView(frame: startCGRect)
+        startButton = ButtonView(frame: startCGRect, image: "startButton")
         self.view.addSubview(startButton)
         startButton.button.addTarget(self, action: #selector(startButtonClicked(sender:)), for: UIControl.Event.touchUpInside)
     }
@@ -37,6 +36,7 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         playMusic()
+        titleView.animOn()
     }
     
     @objc func startButtonClicked(sender: UIButton) {

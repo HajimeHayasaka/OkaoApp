@@ -33,8 +33,8 @@ class TitleView: UIView {
     
     func animOn() {
         let anim = CABasicAnimation(keyPath: "transform.rotation.z")
-        anim.fromValue = -(Double.pi / 16)
-        anim.toValue = Double.pi / 16
+        anim.fromValue = -(Double.pi / 36)
+        anim.toValue = Double.pi / 36
         anim.duration = 1.0
         anim.autoreverses = true
         anim.repeatCount = HUGE

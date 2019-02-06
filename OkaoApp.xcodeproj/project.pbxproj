@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B30C3E5220B014400FC71B4 /* BGM_play1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2B30C3E4220B014400FC71B4 /* BGM_play1.mp3 */; };
+		2B30C3E7220B04C600FC71B4 /* BGM_play2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2B30C3E6220B04C600FC71B4 /* BGM_play2.mp3 */; };
 		2B731E7121FCCA8200A7E34E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B731E7021FCCA8200A7E34E /* AppDelegate.swift */; };
 		2B731E7321FCCA8200A7E34E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B731E7221FCCA8200A7E34E /* ViewController.swift */; };
 		2B731E7621FCCA8200A7E34E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B731E7421FCCA8200A7E34E /* Main.storyboard */; };
@@ -19,10 +21,9 @@
 		2B731E8F21FCCB9200A7E34E /* KuchiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B731E8921FCCB9200A7E34E /* KuchiView.swift */; };
 		2B731E9021FCCB9200A7E34E /* MimiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B731E8A21FCCB9200A7E34E /* MimiView.swift */; };
 		2B731E9121FCCB9200A7E34E /* MeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B731E8B21FCCB9200A7E34E /* MeView.swift */; };
-		2B731E9221FCCB9200A7E34E /* StartButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B731E8C21FCCB9200A7E34E /* StartButtonView.swift */; };
+		2B731E9221FCCB9200A7E34E /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B731E8C21FCCB9200A7E34E /* ButtonView.swift */; };
 		2B731E9321FCCB9200A7E34E /* PlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B731E8D21FCCB9200A7E34E /* PlayViewController.swift */; };
 		2BF680202201E572007111C6 /* BGM_op.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2BF6801E2201E571007111C6 /* BGM_op.mp3 */; };
-		2BF680212201E572007111C6 /* BGM_play.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2BF6801F2201E571007111C6 /* BGM_play.mp3 */; };
 		2BF680242201E590007111C6 /* Touch.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2BF680222201E590007111C6 /* Touch.mp3 */; };
 		2BF680252201E590007111C6 /* Start.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2BF680232201E590007111C6 /* Start.mp3 */; };
 		2BF6806322068074007111C6 /* OkaoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF6806222068074007111C6 /* OkaoView.swift */; };
@@ -31,6 +32,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2B30C3E4220B014400FC71B4 /* BGM_play1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = BGM_play1.mp3; sourceTree = "<group>"; };
+		2B30C3E6220B04C600FC71B4 /* BGM_play2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = BGM_play2.mp3; sourceTree = "<group>"; };
 		2B731E6D21FCCA8200A7E34E /* OkaoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OkaoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B731E7021FCCA8200A7E34E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B731E7221FCCA8200A7E34E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -45,10 +48,9 @@
 		2B731E8921FCCB9200A7E34E /* KuchiView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KuchiView.swift; sourceTree = "<group>"; };
 		2B731E8A21FCCB9200A7E34E /* MimiView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MimiView.swift; sourceTree = "<group>"; };
 		2B731E8B21FCCB9200A7E34E /* MeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeView.swift; sourceTree = "<group>"; };
-		2B731E8C21FCCB9200A7E34E /* StartButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartButtonView.swift; sourceTree = "<group>"; };
+		2B731E8C21FCCB9200A7E34E /* ButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		2B731E8D21FCCB9200A7E34E /* PlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayViewController.swift; sourceTree = "<group>"; };
 		2BF6801E2201E571007111C6 /* BGM_op.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = BGM_op.mp3; sourceTree = "<group>"; };
-		2BF6801F2201E571007111C6 /* BGM_play.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = BGM_play.mp3; sourceTree = "<group>"; };
 		2BF680222201E590007111C6 /* Touch.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Touch.mp3; sourceTree = "<group>"; };
 		2BF680232201E590007111C6 /* Start.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Start.mp3; sourceTree = "<group>"; };
 		2BF6806222068074007111C6 /* OkaoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OkaoView.swift; sourceTree = "<group>"; };
@@ -91,7 +93,7 @@
 				2B731E7021FCCA8200A7E34E /* AppDelegate.swift */,
 				2B731E7221FCCA8200A7E34E /* ViewController.swift */,
 				2B731E8821FCCB9200A7E34E /* TitleView.swift */,
-				2B731E8C21FCCB9200A7E34E /* StartButtonView.swift */,
+				2B731E8C21FCCB9200A7E34E /* ButtonView.swift */,
 				2B731E8D21FCCB9200A7E34E /* PlayViewController.swift */,
 				2BFA314921FCD65200BFF9A3 /* TouchNameView.swift */,
 				2BF6806222068074007111C6 /* OkaoView.swift */,
@@ -113,8 +115,9 @@
 		2BF680182201E2F5007111C6 /* BGM */ = {
 			isa = PBXGroup;
 			children = (
+				2B30C3E4220B014400FC71B4 /* BGM_play1.mp3 */,
+				2B30C3E6220B04C600FC71B4 /* BGM_play2.mp3 */,
 				2BF6801E2201E571007111C6 /* BGM_op.mp3 */,
-				2BF6801F2201E571007111C6 /* BGM_play.mp3 */,
 			);
 			path = BGM;
 			sourceTree = "<group>";
@@ -186,11 +189,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B30C3E7220B04C600FC71B4 /* BGM_play2.mp3 in Resources */,
 				2BF680242201E590007111C6 /* Touch.mp3 in Resources */,
 				2BF680202201E572007111C6 /* BGM_op.mp3 in Resources */,
-				2BF680212201E572007111C6 /* BGM_play.mp3 in Resources */,
 				2B731E7B21FCCA8300A7E34E /* LaunchScreen.storyboard in Resources */,
 				2B731E7821FCCA8300A7E34E /* Assets.xcassets in Resources */,
+				2B30C3E5220B014400FC71B4 /* BGM_play1.mp3 in Resources */,
 				2B731E7621FCCA8200A7E34E /* Main.storyboard in Resources */,
 				2BF680252201E590007111C6 /* Start.mp3 in Resources */,
 			);
@@ -207,7 +211,7 @@
 				2B731E8721FCCB8100A7E34E /* KaoView.swift in Sources */,
 				2BF6806322068074007111C6 /* OkaoView.swift in Sources */,
 				2B731E7321FCCA8200A7E34E /* ViewController.swift in Sources */,
-				2B731E9221FCCB9200A7E34E /* StartButtonView.swift in Sources */,
+				2B731E9221FCCB9200A7E34E /* ButtonView.swift in Sources */,
 				2B731E9321FCCB9200A7E34E /* PlayViewController.swift in Sources */,
 				2B731E7121FCCA8200A7E34E /* AppDelegate.swift in Sources */,
 				2B731E8621FCCB8100A7E34E /* KamiView.swift in Sources */,
