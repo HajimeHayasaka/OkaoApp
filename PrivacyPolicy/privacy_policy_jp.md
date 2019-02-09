@@ -30,4 +30,4 @@
 
 ### お問い合せ
 個人情報の取扱に関するお問い合せは下記までご連絡ください。  
-宛先　Hajime Hayasaka E-mail：lunasa-inion-2.scannlain@i.softbank.jp
+宛先　Hajime Hayasaka E-mail：lunasalunasa0921@gmail.com
