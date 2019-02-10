@@ -37,7 +37,6 @@ class MayugeView: UIView {
     // 上下アニメーション
     func animOn() {
         let anim = CABasicAnimation(keyPath: "position.x")
-        print(button.frame.origin.y)
         let centerPos = button.frame.width / 2
         anim.fromValue = centerPos - 5.0
         anim.toValue = centerPos + 5.0

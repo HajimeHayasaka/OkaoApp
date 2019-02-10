@@ -19,7 +19,6 @@ class MimiView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        print(frame.origin.y)
         button = UIButton()
         button.adjustsImageWhenHighlighted = false
         button.imageView?.contentMode = UIView.ContentMode.scaleAspectFit
@@ -34,7 +33,6 @@ class MimiView: UIView {
     
     func animOn() {
         let anim = CABasicAnimation(keyPath: "position.y")
-        print(button.frame.origin.y)
         let centerPos = button.frame.height / 2
         anim.fromValue = centerPos - 5.0
         anim.toValue = centerPos + 5.0

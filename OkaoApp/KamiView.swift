@@ -46,7 +46,7 @@ class KamiView: UIView {
     
     override func layoutSubviews() {
         button.frame = CGRect(x: 0.0, y: 0.0, width: frame.width, height: frame.height)
-        animButton.frame = CGRect(x: frame.width * 0.3, y: 0.0, width: frame.width * 0.4, height: frame.height * 0.3)
+        animButton.frame = CGRect(x: frame.width * 0.325, y: 30, width: frame.width * 0.35, height: frame.height * 0.25)
     }
     
     // アイテム出現アニメーション

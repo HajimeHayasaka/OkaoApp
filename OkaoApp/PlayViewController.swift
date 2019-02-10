@@ -37,17 +37,17 @@ class PlayViewController: UIViewController {
         self.navigationController?.setNavigationBarHidden(true, animated: false)
         
         // 各Viewの座標をセット
-        let okaoViewCGRect = CGRect(x: 0.0, y: 0.0, width: view.frame.width, height: view.frame.height)
-        let touchNameLabelCGRect = CGRect(x: 0.0, y: view.frame.height * 0.1, width: view.frame.width, height: 70)
+        let touchNameLabelCGRect = CGRect(x: 0.0, y: view.frame.height * 0.05, width: view.frame.width, height: view.frame.height * 0.1)
+        let okaoViewCGRect = CGRect(x: 0.0, y: view.frame.height * 0.15, width: view.frame.width, height: view.frame.height * 0.65)
         let animResetButtonCGrect = CGRect(x: view.frame.width * 0.3, y: view.frame.height * 0.85, width: view.frame.width * 0.4, height: view.frame.height * 0.1)
-        
-        // 顔を表示
-        okaoView = OkaoView(frame: okaoViewCGRect)
-        self.view.addSubview(okaoView)
         
         // タッチした箇所の名前を表示
         touchNameLabel = TouchNameView(frame: touchNameLabelCGRect)
         self.view.addSubview(touchNameLabel)
+        
+        // 顔を表示
+        okaoView = OkaoView(frame: okaoViewCGRect)
+        self.view.addSubview(okaoView)
         
         // アニメーションストップボタン表示
         animResetButton = ButtonView(frame: animResetButtonCGrect, image: "animResetButton")

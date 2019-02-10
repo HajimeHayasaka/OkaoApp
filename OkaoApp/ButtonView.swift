@@ -28,6 +28,7 @@ class ButtonView: UIView {
         
         button = UIButton()
         button.setBackgroundImage(UIImage(named: image), for: UIControl.State.normal)
+        button.contentMode = UIView.ContentMode.scaleAspectFit
         self.addSubview(button)
     }
     

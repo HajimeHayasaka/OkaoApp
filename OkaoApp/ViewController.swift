@@ -19,8 +19,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let titleCGRect: CGRect = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
-        let startCGRect: CGRect = CGRect(x: view.frame.width * 0.25, y: view.frame.height * 0.8, width: view.frame.width * 0.5, height: view.frame.height * 0.12)
+        let titleCGRect: CGRect = CGRect(x: 0, y: view.frame.height * 0.05, width: view.frame.width, height: view.frame.height * 0.75)
+        let startCGRect: CGRect = CGRect(x: view.frame.width * 0.3, y: view.frame.height * 0.85, width: view.frame.width * 0.4, height: view.frame.height * 0.1)
         
         self.view.backgroundColor = UIColor(named: "bgcolor")
         self.navigationController?.setNavigationBarHidden(true, animated: false)

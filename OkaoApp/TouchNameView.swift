@@ -24,7 +24,7 @@ class TouchNameView: UIView {
         label = UILabel()
         label.textColor = UIColor.black
         label.textAlignment = NSTextAlignment.center
-        label.font = UIFont(name: "HelveticaNeue-Bold", size: 70)
+        label.font = UIFont(name: "HelveticaNeue-Bold", size: frame.height)
         label.text = ""
         self.addSubview(label)
     }

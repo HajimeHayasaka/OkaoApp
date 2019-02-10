@@ -27,21 +27,23 @@ class OkaoView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        let kaoX: CGFloat = frame.width * 0.1
-        let kaoY: CGFloat = frame.height * 0.35
-        let kaoWidth: CGFloat = frame.width * 0.8
-        let kaoHeight: CGFloat = frame.width * 0.85
+        
+        let kaoLength: CGFloat = frame.width > frame.height ? frame.height * 0.8 : frame.width * 0.8
+        let kaoX: CGFloat = (frame.width - kaoLength) / 2 
+        let kaoY: CGFloat = (frame.height - kaoLength) * 0.9
+        let kaoWidth: CGFloat = kaoLength
+        let kaoHeight: CGFloat = kaoLength
         
         let kaoCGRect = CGRect(x: kaoX, y: kaoY, width: kaoWidth, height: kaoHeight)
-        let kamiCGRect = CGRect(x: kaoX - 5, y: kaoY - 80, width: kaoWidth + 10, height: kaoHeight * 0.7)
+        let kamiCGRect = CGRect(x: kaoX - 5, y: kaoY - (kaoHeight * 0.25), width: kaoWidth + 10, height: kaoHeight * 0.7)
         let mayugeLeftCGRect = CGRect(x: kaoX + kaoWidth * 0.15, y: kaoY + kaoHeight * 0.4, width: kaoWidth * 0.2, height: kaoWidth * 0.2)
         let mayugeRightCGRect = CGRect(x: kaoX + kaoWidth * 0.65, y: kaoY + kaoHeight * 0.4, width: kaoWidth * 0.2, height: kaoWidth * 0.2)
         let meLeftCGRect = CGRect(x: kaoX + kaoWidth * 0.15, y: kaoY + kaoHeight * 0.55, width: kaoWidth * 0.2, height: kaoWidth * 0.2)
         let meRightCGRect = CGRect(x: kaoX + kaoWidth * 0.65, y: kaoY + kaoHeight * 0.55, width: kaoWidth * 0.2, height: kaoWidth * 0.2)
         let hanaCGRect = CGRect(x: kaoX + kaoWidth * 0.45, y: kaoY + kaoHeight * 0.6, width: kaoWidth * 0.1, height: kaoWidth * 0.2)
         let kuchiCGRect = CGRect(x: kaoX + kaoWidth * 0.35, y: kaoY + kaoHeight * 0.75, width: kaoWidth * 0.3, height: kaoWidth * 0.2)
-        let mimiLeftCGRect = CGRect(x: kaoX - kaoWidth * 0.09, y: kaoY + kaoHeight * 0.55, width: kaoWidth * 0.2, height: kaoWidth * 0.25)
-        let mimiRightCGRect = CGRect(x: kaoX + kaoWidth * 0.9, y: kaoY + kaoHeight * 0.55, width: kaoWidth * 0.2, height: kaoWidth * 0.25)
+        let mimiLeftCGRect = CGRect(x: kaoX - kaoWidth * 0.09, y: kaoY + kaoHeight * 0.57, width: kaoWidth * 0.18, height: kaoWidth * 0.22)
+        let mimiRightCGRect = CGRect(x: kaoX + kaoWidth * 0.9, y: kaoY + kaoHeight * 0.57, width: kaoWidth * 0.18, height: kaoWidth * 0.22)
         
         kaoView = KaoView(frame: kaoCGRect)
         kamiView = KamiView(frame: kamiCGRect)
