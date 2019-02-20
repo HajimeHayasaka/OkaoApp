@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2B30C3E5220B014400FC71B4 /* BGM_play1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2B30C3E4220B014400FC71B4 /* BGM_play1.mp3 */; };
 		2B30C3E7220B04C600FC71B4 /* BGM_play2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2B30C3E6220B04C600FC71B4 /* BGM_play2.mp3 */; };
+		2B6072C8221D8F47000FCD92 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2B6072C7221D8F47000FCD92 /* GoogleService-Info.plist */; };
 		2B731E7121FCCA8200A7E34E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B731E7021FCCA8200A7E34E /* AppDelegate.swift */; };
 		2B731E7321FCCA8200A7E34E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B731E7221FCCA8200A7E34E /* ViewController.swift */; };
 		2B731E7621FCCA8200A7E34E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B731E7421FCCA8200A7E34E /* Main.storyboard */; };
@@ -29,11 +30,14 @@
 		2BF6806322068074007111C6 /* OkaoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF6806222068074007111C6 /* OkaoView.swift */; };
 		2BFA314A21FCD65200BFF9A3 /* TouchNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFA314921FCD65200BFF9A3 /* TouchNameView.swift */; };
 		2BFA314C21FD54F200BFF9A3 /* MayugeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFA314B21FD54F200BFF9A3 /* MayugeView.swift */; };
+		724AD15C32F071278FD11337 /* Pods_OkaoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74CF6C821ED8DDB0BAB20D2F /* Pods_OkaoApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		24BE721A1F56216139BB1D03 /* Pods-OkaoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OkaoApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OkaoApp/Pods-OkaoApp.debug.xcconfig"; sourceTree = "<group>"; };
 		2B30C3E4220B014400FC71B4 /* BGM_play1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = BGM_play1.mp3; sourceTree = "<group>"; };
 		2B30C3E6220B04C600FC71B4 /* BGM_play2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = BGM_play2.mp3; sourceTree = "<group>"; };
+		2B6072C7221D8F47000FCD92 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2B731E6D21FCCA8200A7E34E /* OkaoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OkaoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B731E7021FCCA8200A7E34E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B731E7221FCCA8200A7E34E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +60,8 @@
 		2BF6806222068074007111C6 /* OkaoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OkaoView.swift; sourceTree = "<group>"; };
 		2BFA314921FCD65200BFF9A3 /* TouchNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchNameView.swift; sourceTree = "<group>"; };
 		2BFA314B21FD54F200BFF9A3 /* MayugeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MayugeView.swift; sourceTree = "<group>"; };
+		50A22CDBD69F49715C6AF8AF /* Pods-OkaoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OkaoApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-OkaoApp/Pods-OkaoApp.release.xcconfig"; sourceTree = "<group>"; };
+		74CF6C821ED8DDB0BAB20D2F /* Pods_OkaoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OkaoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				724AD15C32F071278FD11337 /* Pods_OkaoApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +81,8 @@
 			children = (
 				2B731E6F21FCCA8200A7E34E /* OkaoApp */,
 				2B731E6E21FCCA8200A7E34E /* Products */,
+				78BEA5F4EDA7EE8622512A8F /* Pods */,
+				A07A79F5BB295BDE476C8C5E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -108,6 +117,7 @@
 				2B731E7721FCCA8300A7E34E /* Assets.xcassets */,
 				2B731E7921FCCA8300A7E34E /* LaunchScreen.storyboard */,
 				2B731E7C21FCCA8300A7E34E /* Info.plist */,
+				2B6072C7221D8F47000FCD92 /* GoogleService-Info.plist */,
 			);
 			path = OkaoApp;
 			sourceTree = "<group>";
@@ -131,6 +141,23 @@
 			path = Sound;
 			sourceTree = "<group>";
 		};
+		78BEA5F4EDA7EE8622512A8F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				24BE721A1F56216139BB1D03 /* Pods-OkaoApp.debug.xcconfig */,
+				50A22CDBD69F49715C6AF8AF /* Pods-OkaoApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A07A79F5BB295BDE476C8C5E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				74CF6C821ED8DDB0BAB20D2F /* Pods_OkaoApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,9 +165,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2B731E7F21FCCA8300A7E34E /* Build configuration list for PBXNativeTarget "OkaoApp" */;
 			buildPhases = (
+				7A500D795A091A41F615FB85 /* [CP] Check Pods Manifest.lock */,
 				2B731E6921FCCA8200A7E34E /* Sources */,
 				2B731E6A21FCCA8200A7E34E /* Frameworks */,
 				2B731E6B21FCCA8200A7E34E /* Resources */,
+				DA936B74A5DCA7E706686947 /* [CP] Embed Pods Frameworks */,
+				2B82ECBC221D93EC009E916B /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -191,6 +221,7 @@
 			files = (
 				2B30C3E7220B04C600FC71B4 /* BGM_play2.mp3 in Resources */,
 				2BF680242201E590007111C6 /* Touch.mp3 in Resources */,
+				2B6072C8221D8F47000FCD92 /* GoogleService-Info.plist in Resources */,
 				2BF680202201E572007111C6 /* BGM_op.mp3 in Resources */,
 				2B731E7B21FCCA8300A7E34E /* LaunchScreen.storyboard in Resources */,
 				2B731E7821FCCA8300A7E34E /* Assets.xcassets in Resources */,
@@ -201,6 +232,73 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2B82ECBC221D93EC009E916B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n# for release build\nif [\"${CONFIGURATION}\" == \"Release\"]; then   \n\"${PODS_ROOT}/Fabric/run\"\nfi\n";
+		};
+		7A500D795A091A41F615FB85 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OkaoApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DA936B74A5DCA7E706686947 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-OkaoApp/Pods-OkaoApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OkaoApp/Pods-OkaoApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2B731E6921FCCA8200A7E34E /* Sources */ = {
@@ -364,9 +462,11 @@
 		};
 		2B731E8021FCCA8300A7E34E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24BE721A1F56216139BB1D03 /* Pods-OkaoApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 2989S56PL9;
 				INFOPLIST_FILE = OkaoApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
@@ -383,6 +483,7 @@
 		};
 		2B731E8121FCCA8300A7E34E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 50A22CDBD69F49715C6AF8AF /* Pods-OkaoApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
